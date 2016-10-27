@@ -40,5 +40,22 @@ describe ('Thermostat', function(){
     });
   });
 
+  describe('Energy usage', function() {
+    beforeEach(function(){
+      thermostat.energyUsage();
+    });
 
+    it('The energy usage is low if temperature is below 18 degrees', function() {
+      thermostat.temperature = 17;
+      expect(thermostat.energyUsage()).toEqual('Low usage');
+    });
+    it('The energy usage is medium if temperature is between 18 and 25 degrees', function() {
+      thermostat.temperature = 24;
+      expect(thermostat.energyUsage()).toEqual('Medium usage');
+    });
+    it('The energy usage is high if temperature is above 25 degrees', function() {
+      thermostat.temperature = 26;
+      expect(thermostat.energyUsage()).toEqual('High usage');
+    });
+  });
 });
