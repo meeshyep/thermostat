@@ -9,6 +9,10 @@ describe ('Thermostat', function(){
     expect(thermostat.temperature).toEqual(20);
   });
 
+  it ('The thermostat has a minimum temperature of 10 degress', function() {
+    expect(thermostat.minTemp).toEqual(10);
+  });
+
   it ('Can increase the temperature with an up function', function(){
     thermostat.up();
     expect(thermostat.temperature).toEqual(21);
