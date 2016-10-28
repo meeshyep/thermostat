@@ -6,22 +6,24 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <div class="temperature-manager">
+    <div class="temperature">
       <h1>Temperature</h1>
+      20
+      <script> document.write(thermostat.temperature);</script>
       <div>
         <button>Up</button>
         <button>Down</button>
         <button>Reset</button>
       </div>
     </div>
-    <div class="powersavingmode-manager">
+    <div class="powersavingmode">
       <h1>Power Saving Mode</h1>
       <div>
         <button>On</button>
         <button>Off</button>
       </div>
     </div>
-    <div class="energyusage-manager">
+    <div class="energyusage">
       <h1>Energy Usage</h1>
       <div>
         <span>High</span>
@@ -30,6 +32,50 @@
       </div>
     </div>
     <script src="src/thermostat.js">
+    <script>
+    <div id="main">
+  <h1>Your Weather</h1>
+
+  <div id="quick-view">
+    <span id="weather-icons">
+      <i class="wi"></i>
+      <i class="wi"></i>
+    </span>
+
+    <span id="loading">
+      Loading<span>.</span><span>.</span><span>.</span>
+    </span>
+
+    <span id="tempF">
+      <span></span>
+    <i class='wi wi-fahrenheit'></i>
+    </span>
+
+    <span id="tempC" class="hide">
+      <span></span>
+    <i class='wi wi-celsius'></i>
+    </span>
+  </div>
+
+  <div id="grid">
+    <div id="location">…</div>
+    <div id="status">…</div>
+    <div id="wind">
+      <span class="compass">
+        <i class="wi">…</i>
+      </span>
+      <span id="miles">
+      </span>
+      <span id="meters" class="hide">
+      </span>
+    </div>
+  </div>
+
+  <button>Imperial / Metric</button>
+
+</div>
     </script>
-  </body>
-</html>
+<script>
+
+
+</script>
