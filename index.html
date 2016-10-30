@@ -7,32 +7,27 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="src/thermostat.js"></script>
     <div class="temperature">
       <h1>Temperature</h1>
       <h1>20</h1>
-      <!-- <script> document.write(thermostat.temperature);</script> -->
-      <div>
-        <button>Up</button>
-        <button>Down</button>
-        <button>Reset</button>
+      <div class="temperature buttons">
+          <button id="up" onclick="thermostat.up();" >+</button>
+          <script> document.write(thermostat.temperature); </script>
+        <button id="down" onclick="thermostat.down();">-</button>
+        <button id="reset" onclick="thermostat.tempReset();">Reset</button>
       </div>
     </div>
     <div class="powersavingmode">
       <h1>Power Saving Mode</h1>
-      <div>
-        <button>On</button>
-        <button>Off</button>
+      <button id="powerSavingMode"/>On</button>
       </div>
     </div>
-    <div class="energyusage">
-      <h1>Energy Usage</h1>
-      <div>
-        <span>High</span>
-        <span>Medium</span>
-        <span>Low</span>
-      </div>
+    <div class="energy usage">
+      Energy Usage
+      <button id="energyUsage"/>
     </div>
-    <script src="src/thermostat.js">
-    </script>
+    </div>
   </body>
 </html>
